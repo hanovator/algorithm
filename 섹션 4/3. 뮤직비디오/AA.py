@@ -32,7 +32,8 @@ while lt <= rt:
     mid = (lt + rt) // 2  # 이분검색(가운데 값을 먼저 구한다.)
 
     # 이분검색 시작!
-    if Count(mid) <= m:  # 사용한 DVD의 개수가 m보다 작아야한다.
+    # mid >= max: 노래를 쪼개면 안되므로 DVD한장에 들어갈 최소한의 용량은 가장긴 노래보다 커야한다!!!
+    if mid >= max and Count(mid) <= m:  # 사용한 DVD의 개수가 m보다 작아야한다.
         res = mid  # 이분검색을 하다가 더 작은값이(더 좋은값)나오면 갱신한다.
         rt = mid - 1
     else:
