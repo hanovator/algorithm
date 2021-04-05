@@ -24,11 +24,14 @@ for i in range(k):
 lt = 1
 rt = largest
 
+# 이분검색 (촤)
 while lt <= rt:
+
     mid = (lt + rt) // 2
+
     if Count(mid) >= n:
         res = mid
-        lt = mid + 1
+        lt = mid + 1  # 가장 먼 곳을 찾아야하기 때문에 답이 나왔을때 그것보다 큰쪽을 다시한번 체크한다.
     else:
         rt = mid - 1
 print(res)
