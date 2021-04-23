@@ -18,6 +18,7 @@ def DFS(L, sum, tsum):
 
 
 if __name__ == "__main__":
+    # c: 무게제한, n: 바둑이 마리수.
     c, n = map(int, input().split())
     a = [0] * n
     result = -2147000000
